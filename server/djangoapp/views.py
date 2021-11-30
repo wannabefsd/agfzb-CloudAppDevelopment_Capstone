@@ -21,9 +21,22 @@ logger = logging.getLogger(__name__)
 # def about(request):
 # ...
 
+def about(request):
+    context = {}
+    about = "Welcome to Best Cars dealership, home to the best cars in North America. We sell domestic and imported cars at reasonable prices."
+    context['about'] = about
+    return render(request, 'djangoapp/about.html', context)
 
 # Create a `contact` view to return a static contact page
 #def contact(request):
+
+def contact(request):
+    context = {}
+    address = "XXX, XXXXXX, XXX, XXXX"
+    number = "XXX-XX-XXXXXXX"
+    context['address'] = address
+    context['number'] = number
+    return render(request, 'djangoapp/contact.html', context)
 
 # Create a `login_request` view to handle sign in request
 # def login_request(request):

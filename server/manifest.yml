@@ -1,11 +1,11 @@
   applications:
   - name: djangoapp-etienneuae
     routes:
-      - route: djangoapp-etienneuae.mybluemix.net
+      - route: djangoapp-etienneuae.eu-gb.mybluemix.net
     memory: 128M
     buildpack: python_buildpack
   - name: djangoapp-nginx-etienneuae
     routes:
-      - route: djangoapp-etienneuae.mybluemix.net/static
+      - route: djangoapp-etienneuae.eu-gb.mybluemix.net/static
     memory: 128M
     buildpack: staticfile_buildpack

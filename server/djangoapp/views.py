@@ -30,8 +30,8 @@ def about(request):
 
 def contact(request):
     context = {}
-    address = "123 Label St., Honolulu, HI 96181"
-    number = "123-4567"
+    address = "A6 Audi Street, Germany, MB40CLK"
+    number = "+49-2-6812293"
     context['address'] = address
     context['number'] = number
     return render(request, 'djangoapp/contact.html', context)

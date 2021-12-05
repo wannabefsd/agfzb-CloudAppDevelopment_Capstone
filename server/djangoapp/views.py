@@ -33,7 +33,7 @@ def contact(request):
 # Create a `login_request` view to handle sign in request
 def login_request(request):
     context = {}
-    url = "https://1db51a21-9a5f-4f38-b902-dd02b606ef63-bluemix.cloudantnosqldb.appdomain.cloud//api/dealership"
+    url = "https://1db51a21-9a5f-4f38-b902-dd02b606ef63-bluemix.cloudantnosqldb.appdomain.cloud/api/dealership"
     dealerships = get_dealers_from_cf(url)
     # Concat all dealer's short name
     context["dealership_list"]=dealerships

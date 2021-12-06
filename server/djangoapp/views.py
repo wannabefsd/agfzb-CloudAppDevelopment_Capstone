@@ -18,6 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 # Create an `about` view to render a static about page
+#week 1 T4
 def about(request):
     context = {}
     if request.method == "GET":
@@ -25,15 +26,17 @@ def about(request):
 
 
 # Create a `contact` view to return a static contact page
+#Week 1 T4
 def contact(request):
     context = {}
     if request.method == "GET":
         return render(request, 'djangoapp/contact.html', context)
 
 # Create a `login_request` view to handle sign in request
+#week 2 t5
 def login_request(request):
     context = {}
-    url = "https://1db51a21-9a5f-4f38-b902-dd02b606ef63-bluemix.cloudantnosqldb.appdomain.cloud/api/dealership"
+    url = "https://08663624.us-south.apigw.appdomain.cloud/api/dealership"
     dealerships = get_dealers_from_cf(url)
     # Concat all dealer's short name
     context["dealership_list"]=dealerships
@@ -56,6 +59,7 @@ def login_request(request):
 
 
 # Create a `logout_request` view to handle sign out request
+# Week 2 T5
 def logout_request(request):
     context = {}
     url = "https://08663624.us-south.apigw.appdomain.cloud/api/dealership"
@@ -71,6 +75,7 @@ def logout_request(request):
 
 
 # Create a `registration_request` view to handle sign up request
+#week 2 T7
 def registration_request(request):
     context = {}
     # If it is a GET request, just render the registration page
